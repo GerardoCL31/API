@@ -25,5 +25,12 @@ async function fecthPokemonData(pokemonName){
             `;
             pokemponINfoDiv.style.display = 'block';
         }
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+            const pokemonName = input.ariaValueMax.trim();
+            if (pokemon){
+                fecthPokemonData(pokemonName);
+            }
+        });
     }
     
